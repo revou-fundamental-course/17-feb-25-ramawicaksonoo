@@ -46,16 +46,12 @@ body {
     padding: 0 15px;
 }
 
-
-
 /* untuk header*/
 header {
     background-color: #fff;
     padding: 15px 0;
     border-bottom: 1px solid #eaeaea;
-    
 }
-
 
 .header-content {
     display: flex;

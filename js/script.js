@@ -1,6 +1,18 @@
 // js eksternal
 
-//untuk banenr slider
+// js smooth scroll or href
+    
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+//untuk banner slider
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelector('.slides');
     const dots = document.querySelectorAll('.dot');
@@ -43,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
       updateSlider();
     }, 5000);
 
-     // validasi form contact us
+// validasi form contact us
      const contactForm = document.getElementById('contactForm');
      const nameInput = document.getElementById('name');
      const emailInput = document.getElementById('email');
